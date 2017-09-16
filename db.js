@@ -5,6 +5,6 @@ module.exports = {
         'password': ''
     },
     //'database': 'localhost',
-	'database': 'ibpc',
+	'database': 'solucaoecia',
     'users_table': 'usuario'
 };

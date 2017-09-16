@@ -15,6 +15,8 @@ module.exports = function(passport) {
 
     // =========================================================================
     // passport session setup ==================================================
+    
+
     // =========================================================================
     // required for persistent login sessions
     // passport needs ability to serialize and unserialize users out of session
@@ -123,6 +125,7 @@ newUser.id = rows.insertId;
 
                // all is well, return successful user
                var user = rows[0];
+
                return done(null, user);
            });
        })
@@ -132,5 +135,3 @@ newUser.id = rows.insertId;
 function generateHash(password) {
     return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
 };
-
-

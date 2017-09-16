@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>SB Admin - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+  </head>
+
+  <body class="fixed-nav sticky-footer bg-dark" id="page-top">
+
+  <% include ./partials/nav %>
+
+    <div class="content-wrapper">
+
+      <div class="container-fluid">
+
+        <!-- Breadcrumbs -->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item active">My Dashboard</li>
+        </ol>
+
+      <% include ./partials/head %>
+
+      <!-- Example Tables Card -->
+      <div class="card mb-2">
+        <div class="card-header">
+            Data Table Example
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-sm" width="100%" id="dataTable" cellspacing="0">
+              <thead>
+                  <th></th>
+                  <th>Tipo</th>
+                  <th>Grupo/Cota</th>
+                  <th>Titular</th>
+                  <th style="text-align:center"># Parcela</th>
+                  <th style="text-align:center">% Pago</th>
+                  <th style="text-align:center">Vlr Quitação</th>
+                  <th style="text-align:center">Vlr Bem</th>
+                  <th style="text-align:center">Status</th>
+                  <th style="text-align:center"></th>
+
+              </thead>
+
+              <tbody id="tbody">
+<% for(var i=0;i< consorcios.length;i++) {%>
+                <tr class="lin-info" >
+                    <td><a href="#" class="setaExpandir" id="" onclick=""  ><span id="" class="glyphicon glyphicon-chevron-down"></span></a></td>
+                    <td><%- consorcios[i].tipoConsorcio.descricaoTipo %></td>
+                    <td><%- consorcios[i].Grupo %>/<%- consorcios[i].Cota %></td>
+                    <td></td>
+                    <td style="text-align:center"> Numero de parcela</td>
+                    <td style="text-align:center">percentual pago</td>
+                    <td style="text-align:center">Valor da quitação</td>
+                    <td style="text-align:center">valor do bem</td>
+                    <td style="text-align:center"><span ></span> | <span > </span></td>
+                    <td></td>
+                    </tr>
+                    <%}%>
+
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+          </div>
+          <!-- /.container-fluid -->
+
+        </div>
+        <!-- /.content-wrapper -->
+
+
+
+
+
+
+<% include ./partials/footer %>
+
+
+    <% include ./partials/logout %>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/datatables/jquery.dataTables.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/sb-admin.min.js"></script>
+
+  </body>
+
+</html>

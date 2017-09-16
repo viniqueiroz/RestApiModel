@@ -1,6 +1,6 @@
-var connection = require('../../dbConnection.js');
+//var connection = require('../../dbConnection.js');
 
-var Teste = new connection.Teste();
+//var Teste = new connection.Teste();
 
 exports.list_all_testes = function(req, res) {
   Teste.find('all', function(err, teste) {
